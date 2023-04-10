@@ -1,0 +1,22 @@
+{{#with footer}}
+<footer>
+    <div>
+        {{#with social}}
+        {{> link text=email.text href=email.href blank=true }}
+        {{> link text=phone.text href=phone.href blank=true }}
+        {{> link href=linkedin.href text=linkedin.text blank=true noLine=true}}
+        {{!-- <a href="{{social.email.href}}">{{social.email.text}}</a> /
+        <a href="tel:+380670000123">+380670000123</a> /
+        <a href="https://www.linkedin.com/in/dmytro-test" target="_blank">LinkedIn</a> --}}
+        {{/with}}
+    </div>
+    <br>
+    <div>
+        <em>Copyright {{../header.name.firstname}} {{../header.name.lastname}}</em>
+    </div>
+    <br>
+    <div>
+        <address>{{../header.address}}</address>
+    </div>
+</footer>
+{{/with}}

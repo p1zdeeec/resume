@@ -1,0 +1,82 @@
+<div>
+    {{> title data=name big=true }}
+    <b>{{description}}</b>
+    {{#with history}}
+    <div><b>{{founder}} - ({{year}})</b></div>
+    {{/with}}
+
+    <br />
+
+    <div>
+        {{> title data="Types" big=false }}
+        {{#each types}}
+        <div>
+            <li>
+                {{this}}
+            </li>
+        </div>
+        {{/each}}
+
+        <hr />
+
+        <div>
+            {{> title data="Syntax" big=false }}
+            {{#each syntax}}
+            <div>
+                {{this}}
+            </div>
+            {{/each}}
+        </div>
+
+        <hr />
+
+        <div>
+            {{> title data="Features" big=false }}
+            {{#each features}}
+            <div>
+                {{this}}
+            </div>
+            {{/each}}
+        </div>
+
+        <hr />
+
+        <div>
+            {{> title data="Libraries" big=false }}
+            {{#each libraries}}
+            <div>
+                {{this}}
+            </div>
+            {{/each}}
+        </div>
+
+        <hr />
+
+        <div>
+            {{> title data="Tools" big=false }}
+            {{#each tools}}
+            <div>
+                {{this}}
+            </div>
+            {{/each}}
+        </div>
+
+        <hr />
+
+        <div>
+            {{> title data="Community" big=false }}
+            {{#each community}}
+            <div>
+                <ul>
+                    <li>
+                        <h5>{{name}}</h5>
+                    </li>
+                    {{type}}
+                </ul>
+                <br />
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>

@@ -258,7 +258,10 @@ router.get('/work', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
+    layout: 'basic',
+    page: {
+      title: 'Person',
+    },
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -360,7 +363,10 @@ router.get('/person', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-    layout: 'program',
+    layout: 'basic',
+    page: {
+      title: 'Program',
+    },
     program: {
       excursion: {
         name: 'Cultural Tour',

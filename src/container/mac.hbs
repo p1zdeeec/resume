@@ -1,0 +1,119 @@
+{{> title data=name big=true }}
+<div>
+    <ul>
+        <div><b>description:</b> 'The ultimate notebook for power users',</div>
+        <div><b>price:</b> 1999.99,</div>
+        <div><b>category:</b> 'Computers & Tablets',</div>
+    </ul>
+    {{#with features}}
+
+    {{> title data='Processor' big=false }}
+    {{#with processor}}
+    <ul>
+        {{brand}}
+        {{model}}
+        {{speed}}
+        {{cores}}
+        {{cache}}
+    </ul>
+    {{/with}}
+
+    {{> title data='Memory' big=false }}
+    {{#with memory}}
+    <ul>
+        {{type}}
+        {{size}}
+        {{speed}}
+
+    </ul>
+    {{/with}}
+
+    {{> title data='Storage' big=false }}
+    {{#with storage}}
+    <ul>
+        {{type}}
+        {{size}}
+    </ul>
+    {{/with}}
+
+    {{> title data='Display' big=false }}
+    {{#with display}}
+    <ul>
+        {{size}}
+        {{resolution}}
+        {{technology}}
+        {{color_space}}
+        {{brightness}}
+        {{refresh_rate}}
+    </ul>
+    {{/with}}
+
+    {{> title data='Graphics' big=false }}
+    {{#with graphics}}
+    <ul>
+        {{brand}}
+        {{model}}
+        {{memory}}
+    </ul>
+    {{/with}}
+
+    <b>ports:</b>
+    <section>
+        {{#each ports}}
+
+        <div>
+            {{type}} - ({{count}})
+
+            <section>
+                {{#each features}}
+                <div>
+                    {{this}}
+                </div>
+                {{/each}}
+            </section>
+        </div>
+        {{/each}}
+    </section>
+
+    {{> title data='Battery' big=false }}
+    {{#with battery}}
+    <ul>
+        {{type}}
+        {{capacity}}
+        {{life}}
+    </ul>
+    {{/with}}
+
+    <ul>
+        {{weight}}
+    </ul>
+
+    <div>
+        {{#with dimensions}}
+
+        <ul>
+            <div>
+                {{height}}/
+                {{width}}/
+                {{depth}}
+            </div>
+        </ul>
+
+        {{/with}}
+
+        <ul>
+            {{operating_system}}
+        </ul>
+
+        <b>Accessories</b>
+        {{#each accessories}}
+        <ul>
+            {{name}} - ({{price}})
+        </ul>
+
+        {{/each}}
+    </div>
+
+
+    {{/with}}
+</div>

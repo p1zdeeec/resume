@@ -1,0 +1,88 @@
+<section class="py-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-5">
+        <div class="nav">
+          {{#with navigation}}
+          {{#each links}}
+          <div class="nav-item">
+            <a class="nav-link mx-3" href="{{href}}">{{text}}</a>
+          </div>
+          {{/each}}
+          {{/with}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      {{#with newsBlock}}
+      <h3 class="text-center">{{title}}</h3>
+      {{#each cards}}
+      <div class="card col-3 text-bg-dark">
+        <div class="card-body">
+          <h6 class="card-header text-light">{{title}}
+
+            {{#if isTop}}
+            <span class="badge text-bg-danger rounded-pill text-capitalize">топ</span>
+            {{/if}}
+            {{#if isNew}}
+            <span class="badge text-bg-success rounded-pill text-capitalize">нова</span>
+            {{/if}}
+          </h6>
+
+          <div class="text-secondary">{{description}}</div>
+        </div>
+      </div>
+      {{/each}}>
+      {{/with}}
+    </div>
+
+
+    <hr class=" my-5">
+
+    <div class="nav">
+      {{#with goodsBlock}}
+      {{#each tabs}}
+      <div class="nav nav-tabs">
+        {{#if isActive}}
+        <div class="nav-item">
+          <a class="nav-link active">{{text}}</a>
+        </div>
+        {{else}}
+        <div class="nav-item">
+          <a class="nav-link">{{text}}</a>
+        </div>
+        {{/if}}
+
+        {{#if isDisabled}}
+        <div class="nav-item">
+          <a class="nav-link disabled">{{text}}</a>
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+
+      <div class="row my-5">
+        {{#each cards}}
+        <div class="card col-4">
+          <img class="card-img-top mb-1" src="{{image}}" alt="{{title}}">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{title}}
+              {{#if isHot}}
+              <span class="badge text-bg-warning rounded-pill text-uppercase">hot</span>
+              {{/if}}
+              {{#if isNew}}
+              <span class="badge text-bg-primary rounded-pill text-capitalize">нове</span>
+              {{/if}}
+            </h5>
+            {{description}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/with}}
+    </div>
+
+  </div>
+</section>

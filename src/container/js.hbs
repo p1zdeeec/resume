@@ -5,8 +5,8 @@
     <div><b>{{founder}} - ({{year}})</b></div>
     {{/with}}
 
-    <br />
-    <section>
+
+    <section class="mt-5">
         <div>
             {{> title data="Types" big=false }}
             {{#each types}}
@@ -17,7 +17,7 @@
             </div>
             {{/each}}
 
-            <hr />
+            <hr class="my-5">
 
             <div>
                 {{> title data="Syntax" big=false }}
@@ -28,7 +28,7 @@
                 {{/each}}
             </div>
 
-            <hr />
+            <hr class="my-5">
 
             <div>
                 {{> title data="Features" big=false }}
@@ -39,7 +39,7 @@
                 {{/each}}
             </div>
 
-            <hr />
+            <hr class="my-5">
 
             <div>
                 {{> title data="Libraries" big=false }}
@@ -50,7 +50,7 @@
                 {{/each}}
             </div>
 
-            <hr />
+            <hr class="my-5">
 
             <div>
                 {{> title data="Tools" big=false }}
@@ -61,19 +61,18 @@
                 {{/each}}
             </div>
 
-            <hr />
+            <hr class="my-5">
 
             <div>
                 {{> title data="Community" big=false }}
                 {{#each community}}
                 <div>
-                    <ul>
+                    <ul class="mb-5">
                         <li>
                             <h5>{{name}}</h5>
                         </li>
                         {{type}}
                     </ul>
-                    <br />
                 </div>
                 {{/each}}
             </div>

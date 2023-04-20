@@ -20,7 +20,7 @@
         {{/with}}
     </div>
 
-    <hr>
+    <hr class="my-5">
 
     <div>
         <h2>Education :</h2>
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <hr>
+    <hr class="my-5">
 
     <div>
         <h2>Work experience :</h2>
@@ -54,8 +54,8 @@
             <div>
                 {{responsibilities}}
             </div>
-            <br />
-            <div>
+
+            <div class="mt-5">
                 <h3>
                     <div>
                         Year founded: 1990
@@ -94,8 +94,8 @@
                         <div>
                             {{status}}
                         </div>
-                        <br />
-                        <b>teams :</b>
+
+                        <b class="mt-5">teams :</b>
                         {{#each teams}}
                         <b>{{team_name}}</b>
                         <div>
@@ -105,31 +105,29 @@
                             <div>{{email}}</div>
                             {{/with}}
 
-                            <br />
 
-                            <div>
+
+                            <div class="mt-5">
                                 {{#each team_members}}
                                 <div><b>{{name}}</b></div>
                                 <div>{{title}}</div>
                                 <div>{{email}}</div>
                                 <div>{{skills}}</div>
-                                <br />
                                 {{#each projects}}
-                                <b>projects:</b>
+                                <b class="mt-5">projects:</b>
                                 <b>{{name}}</b>
                                 <div>{{description}}</div>
                                 <div>{{technologies}}</div>
 
-                                <br />
 
-                                <div>
+                                <div class="mt-5">
                                     {{#each team_members}}
 
-                                    <div>
+                                    <div class="mb-5">
                                         <div><b>{{name}}</b></div>
                                         <div>{{title}}</div>
                                     </div>
-                                    <br />
+
                                     {{/each}}
                                 </div>
 

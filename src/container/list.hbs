@@ -1,0 +1,45 @@
+<div class="row">
+  <ul class="col-4">
+    {{#each list}}
+    <li>
+      {{#if @first}} first {{/if}}
+      <span>{{name}}</span>
+    </li>
+    {{#if @last}} Disabled {{/if}}
+    {{/each}}
+  </ul>
+
+  <ul class="col-4">
+    {{#each list}}
+    <li>
+      <button {{#if @last}}Disabled{{/if}}>{{name}}</button>
+    </li>
+    {{/each}}
+  </ul>
+
+  <ul class="col-4">
+    {{#each list}}
+    <li>
+      <button {{#if @last}}Disabled{{/if}}>{{name}} - {{@index}}</button>
+    </li>
+    {{/each}}
+  </ul>
+
+  <ul class="col-4">
+    {{#each user}}
+    <li>
+      {{@key}} -
+      {{this}},
+    </li>
+    {{/each}}
+  </ul>
+
+  <ul class="col-4">
+    {{#each user}}
+    <li>
+      {{@key}}
+      {{value}} {{text}}
+    </li>
+    {{/each}}
+  </ul>
+</div>

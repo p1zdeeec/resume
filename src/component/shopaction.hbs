@@ -1,0 +1,9 @@
+<div class="card bg-success text-light">
+    <h2 class="text-center">{{title}}</h2>
+    <p class="text-center">{{description}}</p>
+    {{#each buttons}}
+    <div class="text-center">
+        <a href="{{link}}" alt="{{rel}}" class="btn btn-primary mb-3">{{text}}</a>
+    </div>
+    {{/each}}
+</div>

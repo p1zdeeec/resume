@@ -2,7 +2,7 @@
   {{> shopheader}}
 </header>
 
-<section class="p-3">
+<section class="m-3">
   {{> breadcrumb}}
 
 
@@ -35,9 +35,9 @@
 
     {{#with newsOtherBlock}}
     <h2 class="text-center">{{title}}</h2>
-
-    {{> shoppost}}
-
+    <div class="row gx-0">
+      {{> shoppost}}
+    </div>
     {{/with}}
 
     <hr / class="my-5">
@@ -45,7 +45,7 @@
     {{#with service}}
     {{> shopaction}}
     {{/with}}
-
+  </div>
 
 </section>
 

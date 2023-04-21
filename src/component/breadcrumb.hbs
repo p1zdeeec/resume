@@ -1,0 +1,7 @@
+<ol class="breadcrumb">
+    {{#each breadcrumb}}
+    <li class="breadcrumb-item nav">
+        <a class="{{#unless url}} nav-link px-0 py-0 disabled{{/unless}}" href="{{url}}">{{name}}</a>
+    </li>
+    {{/each}}
+</ol>

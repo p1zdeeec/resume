@@ -1,0 +1,54 @@
+<header class="py-3">
+  {{> shopheader}}
+</header>
+
+<section class="p-3">
+  {{> breadcrumb}}
+
+
+
+  <div class="row">
+    {{#with newsData}}
+    <div class="card mb-1">
+      <img src={{photo}}>
+    </div>
+
+
+    {{#with head}}
+    <h3>{{heading}}</h3>
+    <p class="mb-5">
+      {{description}}
+    </p>
+    {{/with}}
+
+    {{#each body}}
+    <div>
+      <h5 class="mb-0">{{title}}</h5>
+    </div>
+    <p>
+      {{text}}
+    </p>
+    {{/each}}
+    {{/with}}
+
+    <hr / class="my-5">
+
+    {{#with newsOtherBlock}}
+    <h2 class="text-center">{{title}}</h2>
+
+    {{> shoppost}}
+
+    {{/with}}
+
+    <hr / class="my-5">
+
+    {{#with service}}
+    {{> shopaction}}
+    {{/with}}
+
+
+</section>
+
+<footer>
+  {{> shopfooter}}
+</footer>

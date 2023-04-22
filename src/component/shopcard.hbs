@@ -1,20 +1,22 @@
 {{#with goodsOtherBlock}}
 <h2 class="text-center pt-2">{{title}}</h2>
-<div class="row my-5">
+<div class="row g-1">
     {{#each cards}}
-    <div class="card col-4">
-        <img class="card-img-top mb-1" src="{{image}}" alt="{{title}}">
-        <div class="card-body">
-            <h5 class="card-title">
-                {{title}}
-                {{#if isHot}}
-                <span class="badge text-bg-warning rounded-pill text-uppercase">hot</span>
-                {{/if}}
-                {{#if isNew}}
-                <span class="badge text-bg-primary rounded-pill text-capitalize">нове</span>
-                {{/if}}
-            </h5>
-            {{description}}
+    <div class="col-4">
+        <div class="card px-0">
+            <img class="card-img-top mb-1" src="{{image}}" alt="{{title}}">
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{title}}
+                    {{#if isHot}}
+                    <span class="badge text-bg-warning rounded-pill text-uppercase">hot</span>
+                    {{/if}}
+                    {{#if isNew}}
+                    <span class="badge text-bg-primary rounded-pill text-capitalize">нове</span>
+                    {{/if}}
+                </h5>
+                {{description}}
+            </div>
         </div>
     </div>
     {{/each}}

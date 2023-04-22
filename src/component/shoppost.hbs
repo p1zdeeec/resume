@@ -1,17 +1,21 @@
-{{#each cards}}
-<div class="card col-3 text-bg-dark">
-    <div class="card-body">
+<div class="row g-1">
+    {{#each cards}}
+    <div class="col-3">
+        <div class="card text-bg-dark">
+            <div class="card-body">
 
-        <h6 class="card-header text-light">{{title}}
-            {{#if isTop}}
-            <span class="badge text-bg-danger rounded-pill text-capitalize">топ</span>
-            {{/if}}
-            {{#if idNew}}
-            <span class="badge text-bg-success rounded-pill text-capitalize">нова</span>
-            {{/if}}
-        </h6>
+                <h6 class="card-header text-light">{{title}}
+                    {{#if isTop}}
+                    <span class="badge text-bg-danger rounded-pill text-capitalize">топ</span>
+                    {{/if}}
+                    {{#if idNew}}
+                    <span class="badge text-bg-success rounded-pill text-capitalize">нова</span>
+                    {{/if}}
+                </h6>
 
-        <div class="text-secondary">{{description}}</div>
+                <div class="text-secondary">{{description}}</div>
+            </div>
+        </div>
     </div>
+    {{/each}}
 </div>
-{{/each}}

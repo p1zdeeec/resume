@@ -1,0 +1,99 @@
+<header class="py-3">
+  {{> shopheader}}
+</header>
+
+<body>
+
+  {{> breadcrumb}}
+
+  <h1>{{header}}</h1>
+  <div class="row g-1">
+    {{#each sortBlock}}
+
+    <div class="col-3">
+      <select class="form-select">
+        <option selected>{{placeholder}}</option>
+        {{#each options}}
+        <div>
+          <option value="{{value}}">{{text}}</option>
+        </div>
+        {{/each}}
+      </select>
+    </div>
+    {{/each}}
+
+    {{#with filterBlock}}
+    <div class="col-4">
+      <div class="card px-2">
+        {{#with sellers}}
+        {{title}}
+        {{#each list}}
+        <div class="form-check px-0">
+          <input name="list" type="checkbox" class="form-check-iput">
+          <label class="form-check-label">{{value}}</label>
+        </div>
+        {{/each}}
+        {{/with}}
+
+        <hr class="mx-2">
+
+        {{#with brands}}
+        <label class="form-label">{{title}}</label>
+        <input placeholder="{{input.placeholder}}" class="form-control">
+        {{#each options}}
+        <div class="form-check px-0">
+          <input name="list" type="checkbox" class="form-check-iput">
+          <label class="form-check-label">{{value}}</label>
+        </div>
+        {{/each}}
+        {{/with}}
+
+        <hr class="mx-2">
+
+        {{#with price}}
+        <label class="form-label">{{title}}</label>
+        {{#with range}}
+        <input placeholder="{{from}}" class="form-control my-1">
+        <input placeholder="{{to}}" class="form-control my-1">
+        {{/with}}
+        {{#with button}}
+        <div class="mb-2">
+          <button class="btn btn-outline-secondary" href="{{link}}">{{text}}</button>
+        </div>
+        {{/with}}
+
+        {{/with}}
+
+        <hr class="mx-2">
+
+
+        {{#each filterList}}
+        {{title}}
+        {{#each options}}
+        <div class="form-check px-0">
+          <input name="filterList" type="checkbox" class="form-check-iput">
+          <label class="form-check-label">{{value}}</label>
+        </div>
+        {{/each}}
+
+        <hr class="mx-2">
+
+        {{/each}}
+      </div>
+    </div>
+    {{/with}}
+
+    {{> catalogItem}}
+  </div>
+
+  <hr class="my-5">
+
+  {{> shopcard}}
+
+  {{> shopaction}}
+
+</body>
+
+<footer>
+  {{> shopfooter}}
+</footer>

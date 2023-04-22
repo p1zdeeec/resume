@@ -1,0 +1,55 @@
+<main>
+  <header>
+    {{> shopheader}}
+  </header>
+
+  <body>
+    <h1>{{header}}</h1>
+
+    {{#with purchase}}
+    <div class="row g-1">
+      {{#each itemList}}
+      <div class="col-4">
+        {{number}}
+
+        <div>
+          <h6>{{status}}</h6>
+        </div>
+      </div>
+      {{#with amount}}
+      <div class="col-2">
+        {{title}}:
+        <h6>{{value}}</h6>
+      </div>
+      {{/with}}
+
+      <div class="col-4">
+        {{#each images}}
+        <div class=" col-2 p-2">
+          <img width="100px" src="{{this}}">
+        </div>
+        {{/each}}
+      </div>
+
+
+      {{#with button}}
+      <div class="col-2">
+        {{#if isPrimary}}<button class="btn btn-primary" href="{{link}}">{{text}}</button>{{/if}}
+      </div>
+      {{/with}}
+      <hr>
+
+      {{/each}}
+    </div>
+    {{/with}}
+
+  </body>
+
+
+
+
+
+  <footer>
+    {{>shopfooter}}
+  </footer>
+</main>

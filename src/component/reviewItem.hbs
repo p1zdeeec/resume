@@ -1,0 +1,71 @@
+{{#each reviewList}}
+{{!-- <div class="card"> --}}
+
+        <div class="card m-3">
+                <div class="card-header">
+                        {{#with title}}
+                        <div>
+                                <b>{{userName}}</b>
+                        </div>
+                        <div>
+                                {{caption}}
+                        </div>
+                        {{date}}
+                        {{/with}}
+                </div>
+
+                {{#with reviewBody}}
+                {{!-- <div class="card"> --}}
+                        {{#with seller}}
+                        {{title}}
+                        {{value}}
+                        {{/with}}
+
+                        <div class="my-2">
+                                {{#with rating}}
+                                {{title}}
+                                {{value}}
+                                {{/with}}
+                        </div>
+
+                        <p class="p-1">{{text}}</p>
+
+                        {{#with advantages}}
+                        <b>{{title}}</b>
+                        {{text}}
+                        {{/with}}
+
+                        {{#with disadvantages}}
+                        <b>{{title}}</b>
+                        {{text}}
+                        {{/with}}
+
+                        <div class="row">
+                                {{#each images}}
+                                <div class="col-2">
+                                        <img class="p-2" src="{{this}}">
+                                </div>
+                                {{/each}}
+                        </div>
+
+                        <hr>
+
+                        {{#each coments}}
+                        <ol>
+                                <div class="card m-2">
+                                        <b>{{userName}}</b>
+                                        <div>
+                                                {{date}}
+                                        </div>
+                                        {{text}}
+                                </div>
+                        </ol>
+                        {{/each}}
+                        {{!--
+                </div> --}}
+                {{/with}}
+        </div>
+
+        {{!--
+</div> --}}
+{{/each}}

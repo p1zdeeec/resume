@@ -41,8 +41,46 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
+  res.render('index', {
+    layout: 'index',
+    page: {
+      title: 'Resume',
+    },
+
+    header,
+    main: {
+      header: {
+        name: 'Marian Melets',
+        project: 'Resume project',
+      },
+      list: {
+        title: 'Список сторінок',
+        text: 'Хороші курси...Мені подобаються',
+      },
+      button: [
+        { text: 'Skiils', href: '/skills' },
+        { text: 'Summary', href: '/summary' },
+        { text: 'Education', href: '/education' },
+        { text: 'Work', href: '/work' },
+        { text: 'JS', href: '/js' },
+        { text: 'List', href: '/list' },
+        { text: 'Mac', href: '/mac' },
+        { text: 'Person', href: '/person' },
+        { text: 'Program', href: '/program' },
+        { text: 'Shop Cart', href: '/shopcart' },
+        { text: 'Shop Catalog', href: '/shopcatalog' },
+        { text: 'Shop Home', href: '/shophome' },
+        { text: 'Shop News', href: '/shopnews' },
+        { text: 'Shop Order', href: '/shoporder' },
+        { text: 'Shop Product', href: '/shopproduct' },
+        { text: 'Shop Profile', href: '/shopprofile' },
+        { text: 'Shop Review', href: '/shopreview' },
+        { text: 'Task 21', href: '/task21' },
+        { text: 'Task 22', href: '/task22' },
+        { text: 'Task 31', href: '/task31' },
+      ],
+    },
+  })
 })
 
 // ================================================================
@@ -141,52 +179,53 @@ router.get('/skills', function (req, res) {
 
     footer,
     // ↙ сюди вводимо JSON дані
-  }),
-    router.get('/education', function (req, res) {
-      //             ↙ cюди вводимо назву файлу з сontainer
-      res.render('education', {
-        // ↙ сюди вводимо JSON дані
-        page: {
-          title: 'Resume | Education',
+  })
+})
+
+router.get('/education', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('education', {
+    // ↙ сюди вводимо JSON дані
+    page: {
+      title: 'Resume | Education',
+    },
+
+    header,
+
+    main: {
+      educations: [
+        {
+          name: 'First ',
+          isEnd: true,
         },
-
-        header,
-
-        main: {
-          educations: [
-            {
-              name: 'First ',
-              isEnd: true,
-            },
-            {
-              name: 'Second',
-              isEnd: false,
-            },
-            {
-              name: 'Third',
-              isEnd: false,
-            },
-          ],
-
-          certificates: [
-            {
-              name: 'One',
-              id: 1,
-            },
-            {
-              name: 'Two',
-              id: 2,
-            },
-            {
-              name: 'Three',
-              id: 3,
-            },
-          ],
+        {
+          name: 'Second',
+          isEnd: false,
         },
+        {
+          name: 'Third',
+          isEnd: false,
+        },
+      ],
 
-        footer,
-      })
-    })
+      certificates: [
+        {
+          name: 'One',
+          id: 1,
+        },
+        {
+          name: 'Two',
+          id: 2,
+        },
+        {
+          name: 'Three',
+          id: 3,
+        },
+      ],
+    },
+
+    footer,
+  })
 })
 
 router.get('/work', function (req, res) {
@@ -680,6 +719,21 @@ router.get('/bootstrap4', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap4', {
+    layout: 'bootstrap',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/bootstrap5', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap5', {
     layout: 'bootstrap',
   })
   //                  ↑↑ сюди вводимо JSON дані
